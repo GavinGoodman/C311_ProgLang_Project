@@ -204,28 +204,28 @@ Overall, this is the class to run every single aspect of the program.
                         Console.WriteLine("Not enough matches to compare.");
                     }
                     else
-    {
-        int matchNumber = 0;
-        bool validMatchInput = false;
+                    {
+                        int matchNumber = 0;
+                        bool validMatchInput = false;
 
-        while (!validMatchInput)
-        {
-            Console.WriteLine("Enter the first match number to compare matches (1 to " + (matchQueue.getSize() - 1) + "): ");
-            string input = Console.ReadLine();
+                        while (!validMatchInput)
+                        {
+                            Console.WriteLine("Enter the first match number to compare matches (1 to " + (matchQueue.getSize() - 1) + "): ");
+                            string input = Console.ReadLine();
 
-            if (!int.TryParse(input, out matchNumber) || matchNumber < 1 || matchNumber >= matchQueue.getSize())
-            {
-                Console.WriteLine("Invalid match number. Please enter a value from 1 to " + (matchQueue.getSize() - 1) + ".");
-            }
-            else
-            {
-                validMatchInput = true;
-            }
-        }
+                            if (!int.TryParse(input, out matchNumber) || matchNumber < 1 || matchNumber >= matchQueue.getSize())
+                            {
+                                Console.WriteLine("Invalid match number. Please enter a value from 1 to " + (matchQueue.getSize() - 1) + ".");
+                            }
+                            else
+                            {
+                                validMatchInput = true;
+                            }
+                        }
 
-        Console.WriteLine(analyzer.matchSpecificTrends(matchNumber));
-    }
-    break;
+                        Console.WriteLine(analyzer.matchSpecificTrends(matchNumber));
+                    }
+                    break;
 
                 case 6:
                 // displays all of the insights to the player based on the queue match contents at the time of calling
