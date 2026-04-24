@@ -2,7 +2,7 @@
 Name: Gavin Goodman
 Class: CSCI - C311 Programming Langauges
 Date: April 10, 2026
-Program Name: GameplayInsights.cs
+Program Name: StatTracker.cs
 
 General Description:
 This is the main driver force to allow the user to interact
