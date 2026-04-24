@@ -207,7 +207,7 @@ based on the single match.
         return "Kills: " + getKills() +
                " Deaths: " + getDeaths() +
                " Assists: " + getAssists() +
-               " KD: " + calculateKD() +
+               " KD: " + calculateKD().ToString("F2") +
                " Damage: " + getDamage() +
                " Engagements: " + calculateEngagements() +
                " Pace: " + calculatePace();

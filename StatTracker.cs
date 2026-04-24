@@ -50,7 +50,7 @@ Overall, this is the class to run every single aspect of the program.
             Console.WriteLine("2. Remove the Oldest Match");
             Console.WriteLine("3. View the First Played Match");
             Console.WriteLine("4. Display all Queued Matches");
-            Console.WriteLine("5. Show Two Match Insight Comparision");
+            Console.WriteLine("5. Show Two Match Insight Comparison");
             Console.WriteLine("6. Show Overall Match Statistics and Insights");
             Console.WriteLine("7. Exit Tracker");
 
@@ -160,7 +160,7 @@ Overall, this is the class to run every single aspect of the program.
 
                         if (!int.TryParse(input, out objectiveTime) || objectiveTime < 0 || objectiveTime > 250)
                         {
-                            Console.WriteLine("Please enter an integer value greater than or equal to 0 amd less then 250.");
+                            Console.WriteLine("Please enter an integer value greater than or equal to 0 and less then or equal to 250.");
                         }
                         else
                         {
@@ -231,12 +231,12 @@ Overall, this is the class to run every single aspect of the program.
                 // displays all of the insights to the player based on the queue match contents at the time of calling
                     Console.WriteLine("Total Gameplay Kills: " + analyzer.totalKills());
                     Console.WriteLine("Total Gameplay Deaths: " + analyzer.totalDeaths());
-                    Console.WriteLine("Overall KD: " + analyzer.overallKD());
-                    Console.WriteLine("Average Assists a Match: " + analyzer.averageAssists());
-                    Console.WriteLine("Average Engagements a Match: " + analyzer.averageEngagements());
-                    Console.WriteLine("Average Objective Time a Match: " + analyzer.averageObj());
-                    Console.WriteLine("Average Pace: " + analyzer.averagePace());
-                    Console.WriteLine("Win Percentage: " + analyzer.winPercentage());
+                    Console.WriteLine("Overall KD: " + analyzer.overallKD().ToString("F2"));
+                    Console.WriteLine("Average Assists a Match: " + analyzer.averageAssists().ToString("F2"));
+                    Console.WriteLine("Average Engagements a Match: " + analyzer.averageEngagements().ToString("F2"));
+                    Console.WriteLine("Average Objective Time a Match: " + analyzer.averageObj().ToString("F2"));
+                    Console.WriteLine("Average Pace: " + analyzer.averagePace().ToString("F2"));
+                    Console.WriteLine("Win Percentage: " + analyzer.winPercentage().ToString("F2"));
                     Console.WriteLine(insights.kdInsight());
                     Console.WriteLine(insights.paceInsight());
                     Console.WriteLine(insights.objectiveInsight());

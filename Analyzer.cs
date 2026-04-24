@@ -1,6 +1,6 @@
 /*
 Name: Gavin Goodman
-Class: CSCI - C311 Programming Langauges
+Class: CSCI - C311 Programming Languages
 Date: April 9, 2026
 Program Name: Analyzer.cs
 
@@ -12,7 +12,7 @@ custom insights and/or aid for the player to take and apply after
 a few matches have been recorded. This class will use the custom
 queue created along with storing the match data to present 
 total kills and deaths and provide the averages of engagements
-damage, KD, assists, pace, objective time, and the players win
+damage, KD, assists, pace, objective time, and the player's win
 percentage. Then, when comparing the current match to the previous one, 
 can provide insights to the player on trends seen match to match.
 */
@@ -37,8 +37,8 @@ at once and return it to the user to see possible fixes and changes needed in th
     public Analyzer(CustomQueue queuedMatches)
     /*
     This is our only constructor for the class, it will have the argument of CustomQueue
-    in order to access the queue of matches and manipulate thier data. This one constructor
-    though will allow us to use the analyzer to access the queue and move thorugh it when 
+    in order to access the queue of matches and manipulate their data. This one constructor
+    though will allow us to use the analyzer to access the queue and move through it when 
     needed to get each match information to provide a greater scope of change needed for
     the player. This is important and vital for the program to operate as intended.
     */
@@ -49,14 +49,14 @@ at once and return it to the user to see possible fixes and changes needed in th
     public int totalKills()
     /*
     This is a public method to obtain the total kills of the player through all of the 
-    matches inserted into the queue. It will start initially at 0 and move thorugh the 
+    matches inserted into the queue. It will start initially at 0 and move through the 
     queue using a for loop. During the crawl through the queue, we will search each node
     and obtain the number of kills from the player by utilizing the getKills getter 
     method from the Match class and utilize the getMatchAt method from the queue class
     to ensure we are getting this from the correct match in the queue. 
     */
     {
-        int killTotal = 0;                                  //initicalizes variable at 0.
+        int killTotal = 0;                                  //initializes variable at 0.
 
         for (int i = 0; i < matches.getSize(); ++i)         // iterates through the match queue
         {                                                   // to get the amount of kills 
@@ -79,7 +79,7 @@ at once and return it to the user to see possible fixes and changes needed in th
     {
         int deathTotal = 0;                                 // initializes deathTotal to 0
 
-        for (int i = 0; i < matches.getSize(); ++i)         // iteraties through the entire queue 
+        for (int i = 0; i < matches.getSize(); ++i)         // iterates through the entire queue 
         {                                                   // using getMatchAt i to find the total
             Match currentMatch = matches.getMatchAt(i);     // deaths per match and adds them to deathTotal
             deathTotal += currentMatch.getDeaths();
@@ -141,7 +141,7 @@ at once and return it to the user to see possible fixes and changes needed in th
     /*
     This is a double method as well very similar to the averageAssist method. However, in
     this method, we will be finding the average number of engagements by the user. This is
-    done in an identical fashion as to the avreage assists, we go through the queue, get the
+    done in an identical fashion as to the average assists, we go through the queue, get the
     total number of engagements, and average that by dividing the total by the queue size. 
     */
     {

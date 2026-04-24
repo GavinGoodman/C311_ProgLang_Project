@@ -1,6 +1,6 @@
 /*
 Name: Gavin Goodman
-Class: CSCI - C311 Programming Langauges
+Class: CSCI - C311 Programming Languages
 Date: April 9, 2026
 Program Name: CustomQueue.cs
 
